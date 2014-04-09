@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1397033678 source:d:\studia\programowanie obiektowe\h³adki\zad4metody\main.cpp
+1397034186 source:d:\studia\programowanie obiektowe\h³adki\zad4metody\main.cpp
 	<iostream>
 	"Mierniki.h"
 
 1397033302 d:\studia\programowanie obiektowe\h³adki\zad4metody\mierniki.h
 
-1397033358 source:d:\studia\programowanie obiektowe\h³adki\zad4metody\mierniki.cpp
+1397034742 source:d:\studia\programowanie obiektowe\h³adki\zad4metody\mierniki.cpp
 	<iostream>
 	<cmath>
 	"Mierniki.h"

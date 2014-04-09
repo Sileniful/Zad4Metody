@@ -11,8 +11,8 @@ using namespace std;
  const int b=65;
 
 
-//******************************************************************************************
-   float Mierniki::srednia(int ile, float *czas)                      //srednia artmetyczna
+
+   float Mierniki::srednia(int ile, float *czas)
      {
          suma=0;
          for (int i = 0 ; i < ile ; ++i)
@@ -21,8 +21,8 @@ using namespace std;
              }
          return suma/ile;
      }
-//******************************************************************************************
-   float Mierniki::sredniaHarmoniczna(int ile, float *czas)                     //srednia harmoniczna
+
+   float Mierniki::sredniaHarmoniczna(int ile, float *czas)
      {
          suma=0;
          for (int i = 0 ; i < ile ; ++i)
@@ -31,8 +31,8 @@ using namespace std;
              }
          return ile/suma;
      }
-//******************************************************************************************
-   float Mierniki::sredniaGeometryczna(int ile, float *czas)                     //srednia geometryczna
+
+   float Mierniki::sredniaGeometryczna(int ile, float *czas)
      {
         iloczyn=1;
         for (int i = 0 ; i < ile ; ++i)
@@ -41,16 +41,16 @@ using namespace std;
             }
          return exp(log(iloczyn)/ile);
      }
-//******************************************************************************************
-   float Mierniki::wariancja(int ile,float *czas)                     //wariancja
-     {
+
+   float Mierniki::wariancja(int ile,float *czas)
+   {
          war=0;
          for(int i = 0 ; i < ile ; ++i)
               war+=pow((czas[i]-srednia(ile,czas)),2);
          return war/(ile-1);
      }
-//******************************************************************************************
-   void Mierniki::sortowanie(int ilosc, float *tablica)               //sortowanie do modalnej
+
+   void Mierniki::sortowanie(int ilosc, float *tablica)
      {
           for (int i=0;i<ilosc-1;++i)
                {
@@ -61,8 +61,8 @@ using namespace std;
                       }
               }
      }
-//******************************************************************************************
-   int Mierniki::modalna(int ile, float *czas)                        //modalna
+
+   int Mierniki::modalna(int ile, float *czas)
      {
         int maks = 0;
         int licz = 0;
@@ -85,8 +85,8 @@ using namespace std;
          }
         return czas[indeks];
      }
-//******************************************************************************************
-   int Mierniki::mediana(int ile, float *czas)                        //mediana
+
+   int Mierniki::mediana(int ile, float *czas)
      {
         int media;
         if(ile%2==0)
@@ -95,13 +95,13 @@ using namespace std;
             media=ile/2;
         return czas[media];
      }
-//******************************************************************************************
-   float Mierniki::odchylenieStandardowe(int ile, float *czas)                //odchylenie standardowe
+
+   float Mierniki::odchylenieStandardowe(int ile, float *czas)
      {
         return sqrt(wariancja(ile,czas));
      }
 
-   float Mierniki::odchylenieOdSredniej(int ile, float *czas)               //odchylenie od sredniej
+   float Mierniki::odchylenieOdSredniej(int ile, float *czas)
      {
          sr=0;
          for (int i = 0 ; i < ile ; ++i)
@@ -109,7 +109,7 @@ using namespace std;
          return sr/ile;
      }
 
-   int Mierniki::maksimum(int ile, float *czas)                           //maksimum
+   int Mierniki::maksimum(int ile, float *czas)
      {
          int maks=czas[0];
          for(int i=1;i<ile;++i)
@@ -118,7 +118,7 @@ using namespace std;
          return maks;
      }
 
-   int Mierniki::minimum(int ile, float *czas)                            //minimum
+   int Mierniki::minimum(int ile, float *czas)
      {
          int min=czas[0];
          for(int i=1;i<ile;++i)
